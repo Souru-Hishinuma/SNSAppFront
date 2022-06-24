@@ -1,9 +1,10 @@
 import React from 'react';
 import "../../index.css";
+import { Users } from '../../dummyData';
 
 export const Sidebar = () => {
   return (
-    <div class="h-screen w-full">
+    <div class="h-screen w-2/12">
         <div class="p-5">
             <ul class="p-0 m-0">
                 <li class="rounded-full flex items-center mb-3 py-1.5 px-1 cursor-pointer shadow-lg hover:shadow-none hover:translate-y-1.5">
@@ -37,22 +38,12 @@ export const Sidebar = () => {
             </ul>
             <hr class="my-5" />
             <ul class="p-0 m-0 list-none">
-                <li class="flex items-center mb-4">
-                    <img class="w-8 h-8 object-cover rounded-full mr-2.5" src="/assets/person/2.jpeg" />
-                    <span>Shin Code</span>
-                </li>
-                <li class="flex items-center mb-4">
-                    <img class="w-8 h-8 object-cover rounded-full mr-2.5" src="/assets/person/3.jpeg" />
-                    <span>Shin Code</span>
-                </li>
-                <li class="flex items-center mb-4">
-                    <img class="w-8 h-8 object-cover rounded-full mr-2.5" src="/assets/person/4.jpeg" />
-                    <span>Shin Code</span>
-                </li>
-                <li class="flex items-center mb-4">
-                    <img class="w-8 h-8 object-cover rounded-full mr-2.5" src="/assets/person/5.jpeg" />
-                    <span>Shin Code</span>
-                </li>
+                {Users.map((user) => (
+                    <li class="flex items-center mb-4">
+                        <img class="w-8 h-8 object-cover rounded-full mr-2.5" src={user.profilePicture} />
+                        <span>{user.username}</span>
+                    </li>
+                ))}
             </ul>
         </div>
     </div>

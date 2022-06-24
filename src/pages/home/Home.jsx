@@ -11,8 +11,8 @@ export const Home = () => {
     <Topbar />
     <div class="flex w-full bg-slate-100">
       <Sidebar />
-      {/* <MainPosts />
-      <Rightbar /> */}
+      <MainPosts />
+      <Rightbar />
     </div>
     </>
   )
